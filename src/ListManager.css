@@ -1,9 +1,38 @@
-.listManagerContainer {
-    width: 90%;
-    height: 70%;
-    border-radius: 28px;
+#listManager {
+    background-color: #D9D9D9;
+}
+
+.leftContainer {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    row-gap: 20px;
+    width: 550px;
+    height: 100%;
+}
+
+.phoneNumberContainer {
+    background-color: white;
+    height: 686.5px;
+    width: 521px;
+    border-radius: 10px;    
+}
+
+.rightContainer {
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #D9D9D9;
+    width: 60%;
+    height: 100%;
+}
+
+.redButton {
+    background-color: #C74646;
+    color: white;
+    width: 143.56px;
+    height: 42px;
+    border-radius: 10px;
 }

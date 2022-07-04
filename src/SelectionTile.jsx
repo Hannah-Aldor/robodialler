@@ -1,10 +1,11 @@
 import './SelectionTile.css';
+import './whiteButton.css';
 
 export default function SelectionTile(props) {
     return (
         <div className="selectionTile">
             <h1>{props.header}</h1>
-            <button onClick={props.buttonAction}>{props.buttonText}</button>
+            <button className="whiteButton" onClick={props.buttonAction}>{props.buttonText}</button>
         </div>
     );
 }

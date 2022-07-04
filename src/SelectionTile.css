@@ -1,6 +1,11 @@
 .selectionTile {
     background-color: #D9D9D9;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 30%;
+    height: 218px;
     border-radius: 30px;
 }

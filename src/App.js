@@ -3,11 +3,23 @@ import ListManager from './ListManager.jsx';
 import HomePage from './HomePage.jsx';
 import logo from './8x8-transparent-logo.png';
 import './App.css';
+
 export default function App() {
-    let [displayingListManager, setDisplayingListManager] = useState(false);
+    const [displayingListManager, setDisplayingListManager] = useState(false);
+    const [phoneNumberList, setPhoneNumberList] = useState([]);
+    console.log("Phone Number List: %o", phoneNumberList);
     return (
-    <div className= {displayingListManager ? "App2" : "App1"}>
-        {displayingListManager ? <ListManager/> : <HomePage changePage={setDisplayingListManager}/>}
+    <div className= "App">
+        {displayingListManager ? 
+            <ListManager 
+                phoneNumberList={phoneNumberList}
+                setPhoneNumberList={setPhoneNumberList}
+            /> 
+            : <HomePage
+                changePage={setDisplayingListManager}
+                phoneNumberList={phoneNumberList}
+                setPhoneNumberList={setPhoneNumberList}
+            />}
         <div><img src={logo}></img></div>
     </div>
     )
