@@ -1,5 +1,6 @@
 #listManager {
     background-color: #D9D9D9;
+    border-radius: 15px;
 }
 
 .leftContainer {
@@ -20,10 +21,9 @@
 }
 
 .rightContainer {
-    background-color: pink;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     width: 60%;
     height: 100%;

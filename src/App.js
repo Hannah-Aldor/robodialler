@@ -19,6 +19,8 @@ export default function App() {
                 changePage={setDisplayingListManager}
                 phoneNumberList={phoneNumberList}
                 setPhoneNumberList={setPhoneNumberList}
+                displayingListManager={displayingListManager}
+                setDisplayingListManager={setDisplayingListManager}
             />}
         <div><img src={logo}></img></div>
     </div>
