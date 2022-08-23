@@ -35,9 +35,25 @@ app.use(bodyParser.json());
 
 // respond to all AJAX querires with this message
 app.use(function(req, res, next) {
-  // This line was causing a lot of errors; changed 'req' to 'res'
-  res.json({msg: "Hello World!"})
+  res.json({"msg": "Hello World!"});
+  next();
 });
+
+// POST Request Handler for Generating Callback
+app.post("/generateCallback", async function(req,res) {
+  console.log("This is req.body: %o", req.body);
+  console.log("Received post request!!");
+  console.log("Getting phone number list: ", req.body["phoneNumberList"]);
+  let api_res = await generateCallback(req.body["phoneNumberList"]);
+});
+
+async function generateCallback(phoneNumberList) {
+  for (let i = 0; i < phoneNumberList.length; i++) {
+    console.log("Making request for " + phoneNumberList[i]);
+    let res = await fetch(`https://vcc-na20.8x8.com/api/tstats/interactions/webcallback/externaltransaction/${phoneNumberList[i]}.json`);
+    console.log("API request responded with %o", res.status);
+  }													
+}
 
 // end of pipeline specification
 

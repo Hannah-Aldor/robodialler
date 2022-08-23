@@ -22,7 +22,6 @@ export default function App() {
                 displayingListManager={displayingListManager}
                 setDisplayingListManager={setDisplayingListManager}
             />}
-        <div><img src={logo}></img></div>
     </div>
     )
 }
